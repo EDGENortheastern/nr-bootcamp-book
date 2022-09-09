@@ -1,0 +1,190 @@
+---
+sidebar_position: 1
+---
+
+# D2S1. Python introduction
+
+[Slides](https://hackmd.io/@D3o17PKxQImUPBfYYD6wYg/HkT4PTje5#/3)
+
+## Python
+
+[Guido Van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) created Python in the late 1980s.
+
+People like calling Python a general-purpose programming language. One can use Python's modules and libraries for a wide range of purposes:
+
+- Mathematics and Statistics
+  - SciPi
+  - NumPy
+- Data analysis and manipulation
+  - Pandas
+- Data visualisation
+  - Matplotlib
+  - Plotly
+- Artificial Intelligenc/Machine Learning
+  - scikit-learn
+  - PyTorch
+- Parallel processing
+  - PySpark
+- Web Development
+  - Django
+  - Flask
+- DevOps
+
+## Python 2, Python 3
+
+Python 2 reached end-of-life in 2020. Its updates - including security updates - have stopped being released.
+
+Python 3 was released in 2008; however, its adoption was very slow. As a result, you can still find some examples of code written in Python 2 on the internet. Make sure to check the version of Python when you search the internet for code examples.
+
+Here is some Python 2:
+
+```python
+print 'Hello world!!'
+```
+
+This course focuses on *Python3 only*.
+
+## Deepnote
+
+[Deepnote](https://docs.deepnote.com/) is a free online Python notebook. It is the main tool for Python tasks in this course.
+
+Deepnotes run in the cloud, so you do not have to download any software. Having said that, we will also show how to run Python on your local machine; you can do that if you wish. Deepnote notebooks are compatible with [Jupyter notebooks](https://jupyter.org/https://jupyter.org/).
+
+[Sign up](https://deepnote.com/education) for a free Deepnote account via `https://deepnote.com/education` link. Sign up with **your Northeastern account** to get more computing power as a student.
+
+### Duplicating Deepnotes
+
+You can easily fork/duplicate deepnotes to make your own copies. 👇
+
+<img
+ src="/img/gifs/duplicate-deepnote.gif"
+ alt="How to duplicate a deepnote"
+ class="medium screenshot"
+/>
+
+---
+
+⚠️ All resources we share are open to view; some allow executing code.
+However, to make changes, you **must** make your copy, i.e., fork or duplicate.
+
+---
+
+### Your first Deepnote wih tasks
+
+We will use Deepnotes to demonstrate Python skills and to set practice tasks.
+
+Duplicate the Deepnote below, run or re-run the cells and try the tasks (signposted 🏋️).
+
+[<img
+    src="/img/icons/deepnote-logo.svg"
+    alt="Deepnote link"
+/>](https://deepnote.com/project/Intro-to-deepnote-i8am-iqlSC64ngY4l3-i0w/%2Fbasics.ipynb)
+
+You can see the solutions [here](https://deepnote.com/project/Solutions-vtNFT9yvQYOiopLw115Tcw/%2Fweek1%2Fintro-deepnote-solutions.ipynb).
+
+A Deepnote notebook consists of Python cells and markdown cells.
+You can run (execute) code cells. 👇
+
+<img
+ src="/img/gifs/run-cell.gif"
+ alt="How to run cells"
+ class="medium screenshot"
+/>
+
+## Variables
+
+> A variable is a unique identifier associated with a priamry memory location. It can store values that can change when the program runs.
+
+Let's decypher the above.
+
+- "An idntifier" means a name
+- The name of a variable has to be unique
+- A variable is linked with an address in computer memory
+- Where values can be stored
+- Those values can change
+
+```python
+my_number = 3 # defines variable my_number
+print(my_number) # prints variable my_number
+my_number = my_number+5 # changes variable my_number, incerements it by 5
+```
+
+## Rules for variable names
+
+- names can not start with a number
+- names can not contain spaces, use _ intead
+- names can not contain any of these symbols: `:'",<>/?|\!@#%^&*~-+`
+- it's considered best practice ([PEP8](https://www.python.org/dev/peps/pep-0008/#function-and-variable-names)) that names are lowercase with underscores
+- you must not use Python built-in keywords like `list` and `str`
+- avoid using the single characters `l` (lowercase letter el), `O` (uppercase letter oh) and `I` (uppercase letter eye) as they can be confused with `1` and `0`
+
+## Data types
+
+Python variables can be of the following data types:
+
+| Name | Type | Description |
+| :- | :- | -: |
+| Integer  | int | Whole numbers, e.g., 32, 5, -20  |
+| Float  | float | Numbers with a decimal point, e.g., 1.2, -3.2 |
+| String  | str | Strings of characters, text, e.g., "hello" |
+| Boolean  | bool | True or False |
+| List  | list | Ordered collections of values, e.g., `[23,"hello",4.5]` |
+| Dictionary  | dict | Unordered key-value pairs, e.g., `{name: "Alex", age: 21}` |
+| Tuple  | tup | Unchangeable (immutable) collections, e.g., `(2,3)`|
+| Set  | set | Collections of unique value, e.g., `{"a","b"}`|
+
+## Representing Strings
+
+Strings in Python can be enclosed either with single quotes like `'hello'` or double quotes, like `"hello"`.
+
+Mixed quotes can help output an apostrophe.
+
+```python
+# Notice that the single quote ' is surrounded by
+# double quotes, ""
+greeting = "Hello, it's Alex"
+```
+
+Strings can be printed out using the `print()` function in Python.
+
+```python
+>>> print("Hello ")
+Hello
+>>> name = "Alex"
+>>> print(name)
+Alex
+```
+
+A quick way to print the value of multiple variables without formatting them is to pass them into the `print()` method as comma-separated values. This will print the value of each variable separated by a space.
+
+```python
+>>> name = "Alex"
+>>> print("Hello", name)
+Hello Alex
+```
+
+### Concatenation
+
+Strings can be **concatenated** (added together) using the `+` operator. For example:
+
+```python
+salutation = "Hello "
+name = "Alex"
+greeting = salutation + name
+# The value of greeting will be "Hello Alex"
+```
+
+## Dynamic Typing
+
+Python uses *dynamic typing*, meaning you can reassign variables to different data types. This makes Python very flexible in assigning data types; it differs from other languages that are *statically typed*.
+
+<iframe title="Embedded cell output" src="https://embed.deepnote.com/ff8ed217-77e5-445b-8d27-e9d948f86164/d3df9fff-7fb4-419a-bf26-61f6e4ba4bdc/a40f6cbc-5209-4e1e-820b-1fa319b40953?height=171.1875" height="171.1875" width="500"/>
+
+## Deepnote on variables and data types
+
+Duplicate the Deepnote below, run or re-run the cells and try the tasks (signposted 🏋️).
+
+[<img
+    src="/img/icons/deepnote-logo.svg"
+    alt="Deepnote link"
+/>](https://deepnote.com/project/variables-data-types-0bTIrcCdS6eLHJT1ytYJWA/%2Fnotebook.ipynb)

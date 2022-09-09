@@ -1,0 +1,144 @@
+---
+sidebar_position: 1
+---
+
+# D10S2. More database reports
+
+## `GROUP BY`
+
+The `GROUP BY` statement allows to generate new tables that use the results of aggregate functions as cell values.
+
+This result table is a grouped table. `GROUP BY` an be used with any aggregate function, e.g., `MAX`, `MIN`, `AVG`, `SUM`, or `COUNT`.
+
+## `GROUP BY` and `MIN`
+
+Let us exemplify `GROUP BY` using BigQuery's data set `chicago_taxi_trips`.
+
+If we check the schema we will see that there is a column `payment_type`.
+
+Let us generate new tables that group by `payment_type`.
+
+To find out the smallest trip total per payment type we can use:
+
+```sql
+SELECT
+  payment_type,
+  MIN(trip_total) AS min_trip_total
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+GROUP BY
+  payment_type
+ORDER BY
+  payment_type;
+```
+
+Run the query above and change the sorting function so that the largest minimal values is shown first:
+
+```sql
+SELECT
+  payment_type,
+  MIN(trip_total) AS min_trip_total
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+GROUP BY
+  payment_type
+ORDER BY
+  min_trip_total DESC;
+```
+
+## `GROUP BY` and `MAX`
+
+In the next query we find the **maximum** tip for each of the payment type groups.
+
+```sql
+SELECT
+  payment_type,
+  MAX(tips) AS max_tips
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+GROUP BY
+  payment_type
+ORDER BY
+  max_tips DESC;
+```
+
+Fascinating results. Change the query so that it orders by payment type alphabetically.
+
+## `GROUP BY` and `AVG`
+
+The `AVG()` function computes the average value for a numeric column.
+In the next query we find the **average** toll for each of the taxi company in Chicago.
+
+```sql
+SELECT
+  company,
+  AVG(tolls) AS avg_tolls
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+GROUP BY
+  company
+ORDER BY
+  avg_tolls DESC;
+```
+
+Fascinating results. Change the query so that it finds average tips for each payment type.
+
+## `GROUP BY` and `COUNT`
+
+`COUNT` will count the number of fows with a specific value. For exampls, the query below will count all rows grouped by payment type where the name of the company is recorded.
+
+```sql
+SELECT
+  payment_type,
+  COUNT(company) AS number_of_companies
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+GROUP BY
+  payment_type
+ORDER BY
+  number_of_companies DESC;
+```
+
+If we want the number of unique companies that accept a specific payment we need `DISTINCT`:
+
+```sql
+SELECT
+  payment_type,
+  COUNT(DISTINCT company) AS number_of_companies
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+GROUP BY
+  payment_type
+ORDER BY
+  number_of_companies DESC;
+```
+
+## `GROUP BY` and `SUM`
+
+```sql
+SELECT
+  company,
+  sum(tips)/1000 AS total_tips_thousand_dollars
+FROM
+  `bigquery-public-data.chicago_taxi_trips.taxi_trips`
+GROUP BY
+  company
+ORDER BY
+  total_tips_thousand_dollars DESC;
+```
+
+## Extra `GROUP BY` tasks
+
+Using Google's BigQuery explore the dataset:
+
+`bigquery-public-data.new_york_trees.tree_census_2015`.
+
+First of all, explore the schema. It has a detailed explanation of every attribute (reminder: attributes are columns). Try answering the following questions:
+
+1. For each type of tree (use the spc_common column), calculate the average diameter (use the tree_dbh column)
+2. For each type of tree (use the spc_common column), calculate the minimum diameter (use the tree_dbh column)
+3. For each type of tree (use the spc_common column), calculate the maximum diameter (use the tree_dbh column)
+4. Count trees that have a health status of "Poor"
+5. What is the maximum, minimum, and average tree_dbh across the entire data set?
+6. How many trees are "Damaged"?
+7. Get the average diameter for trees grouped by their Latin name. Sort in reverse alphabetical order.

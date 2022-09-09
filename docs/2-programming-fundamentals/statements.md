@@ -1,0 +1,74 @@
+---
+sidebar_position: 2
+---
+
+# D2S2. Python statements
+
+## Indentation
+
+Python is driven by code indentation and whitespace. Code readability is a core part of the design of the Python language.
+
+Compulsory indentation makes debugging difficult for beginners.
+
+Indented blocks follow colons in `if` statements and others.
+
+<iframe title="Embedded cell output" src="https://embed.deepnote.com/ff8ed217-77e5-445b-8d27-e9d948f86164/d3df9fff-7fb4-419a-bf26-61f6e4ba4bdc/27ea5eb1-dc0b-4e3c-b772-35bb4d56ae44?height=101" height="101" width="500"/>
+
+## if, elif, else statements
+
+`if` statements in Python allow telling the computer to perform alternative actions depending on a condition.
+
+Verbally, we can imagine we are telling the computer:
+Hey if this case happens, perform some action, otherwise perform some other action"
+
+<iframe title="Embedded cell output" src="https://embed.deepnote.com/ff8ed217-77e5-445b-8d27-e9d948f86164/d3df9fff-7fb4-419a-bf26-61f6e4ba4bdc/04c2fdc5-95b3-42d8-82a4-bcad423303a1?height=219" height="219" width="600"/>
+
+---
+
+`elif` means **else if**. It means, **if** this `if` statement isn't `True`, try this **instead.**
+
+<iframe title="Embedded cell output" src="https://embed.deepnote.com/ff8ed217-77e5-445b-8d27-e9d948f86164/d3df9fff-7fb4-419a-bf26-61f6e4ba4bdc/00001-828445c3-8abf-4670-a648-34bea3782bf8?height=255" height="255" width="500"/>
+
+You can have as many `elif` statements in your code as you want. They get evaluated in the order that they're declared **until** Python finds one that is `True`. That runs the code defined in that `elif`, and skips the rest.
+
+<iframe title="Embedded cell output" src="https://embed.deepnote.com/ff8ed217-77e5-445b-8d27-e9d948f86164/d3df9fff-7fb4-419a-bf26-61f6e4ba4bdc/d2ea372d-cf98-45c4-bb88-fb722f2fead1?height=291" height="291" width="500"/>
+
+### Fake chatbot task
+
+Making conversational apps as below helps to understand `if-elif-else` beter.
+Press ▶ to run the code. You can also change the code and reset.
+
+<iframe src="https://trinket.io/embed/python/598f3f3f40" width="100%" height="300" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+### Working in [replit](https://replit.com/)
+
+Deepnote is not ideal for interacting with the user. For Python programs that involve user interactions, we will demo code in replit, a cloud code playground.
+
+Fork the replit below, making sure you have signed up to [replit](https://replit.com/). **Sign up with your GitHub account.**
+
+⚠️ If you sign up to replit with your GitHub credentials your Python portfolio will look much better and employers will headhunt **you** (eventually).
+
+[<img
+    src="/img/icons/replit.svg"
+    alt="Link to a forkable replit"
+/>](https://replit.com/@missPunter/chat-start#main.py)
+
+## Python Loops
+
+Sometimes you need to repeat exactly the same lines of code.
+
+<iframe src="https://trinket.io/embed/python/b3bae2565e" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+Loops make code shorter and less repetitive.
+
+### For loop
+
+`for i in range()` allows to repeat the same lines of code a set number of times.
+
+<iframe src="https://trinket.io/embed/python/24e6cd522a" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+
+### While loop
+
+`WHILE` loop repeats code until a condition is met.
+
+<iframe src="https://trinket.io/embed/python/26002c63b7" width="100%" height="600" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>

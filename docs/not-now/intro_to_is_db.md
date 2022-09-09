@@ -1,0 +1,23 @@
+---
+sidebar_position: 3
+---
+
+# Introduction to information systems and databases
+
+## Databases
+
+Relational Databases have their origin in a time when computing power and storage space was incredibly limited. Looking for information even in files that were mostly text would take a long time and visual interfaces were rare. Relational databases brought in the concept of tables. These tables would store information in Rows and Columns. 
+
+When data scientists rank their most valuable skills, a language called SQL often [tops the charts](https://towardsdatascience.com/10-most-practical-data-science-skills-you-should-know-in-2022-9487d7750e8a). SQL - structured query language - is what is known as a declarative programming language. Rather than specifying every element of how a computer program should complete an operation, as in imperative programming languages, you simply specify what you want to happen. The database engine will interpret your request, and get you what you want - the method used might vary depending on the type of database, but the end user does not need to worry about this. SQL is designed to be a universal, easily accessible language. Originally, given its simplicity and similarity to English it was envisioned that everyone who used a computer would be able to learn. The growth of graphical applications has meant many more people use visual applications, and its use is now more limited. More recently, a new generation of databases have moved away from the SQL standard. At the same time, the language remains easy to learn - and it will transform the way you look at data.
+
+## Information Systems
+
+Data is transformed into information as it is provided with context. This context allows it to be applied within a particular area or domain; it makes the data useful for something. An information system will typically be built on top of a database, but will include views and interfaces to allow users to view and manipulate relevant data. Operational systems will support day to day operations in a particular, whereas more strategic systems will allow organisations to understand what has happened, or predict what will happen. Different types of information system will be specialised for particular purposes. At the same time, we are seeing the growth of what are called Platforms - complex systems that fulfill many different roles. We also see the importance of integrations between different systems. Rather than individual systems, organisations need to think about and create data architectures.
+
+## Data Architectures
+
+Data architectures in contemporary organisations need to deal with the growing importance of data to business operations - it is likely that without access to information processing capacities, most organisations would be paralysed. The concept of big data is used to refer both to the challenges of working with big data, and to opportunities made available by successful data operations. Companies need to be prepared to handle the 4 vs - Volume, Variety, Velocity and Veracity. Volume refers to the amount of information being stored and processed; while our technology has become far more powerful, the amount of data has increased exponentially. Variety refers to differences in data organisation - as companies now need to analyse data on a global scale from very different business units, the challenge of reconciling this data is more pronounced. There are differences in format; increasingly, video, audio and other forms of information need to be considered. Velocity relates to the speed of data processing; while analysis may have once need to have been done annually for accounting purposes, or quarterly for operational planning, it is now necessary to get a real time view of what is going on in the organisation to effectively support new models of production and service delivery. Veracity relates to the difficulty of confirming the authenticity or accuracy of information, particularly when scale and range is expanded and time available is compressed. 
+
+## Customer Relations Management Systems
+
+Customer Relationship Management systems are a type of Information System oriented towards supporting people who work in customer facing roles. As organisations and markets grow, the challenge of supporting end users - all who have their own individual needs - becomes more difficult. The growth of social media means both that customers expect to be supported on a variety of different channels, while the consequences for reputation of poor service can be far more significant. At the same time, information systems designed to support customer service have become incredibly sophisticated.
