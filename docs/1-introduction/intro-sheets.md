@@ -2,32 +2,151 @@
 sidebar_position: 3
 ---
 
-# D1S4. Introduction to Google Sheets
+# D1S4. Introduction to Markdown
 
-[Slides](https://hackmd.io/@alexcasper/HkluShg2Y#/1/0/0)
+Markdown is a very simple computer language.
+It is not sophisticated enough to build apps,
+but it is easily the best way to style text on the web.
+There are several flavours of the Markdown language.
+The one we focus on is known as the [GitHub flavour](https://guides.github.com/features/mastering-markdown/).
 
-## Who is this course for?
+## Styling with Markdown
 
-This course is for anyone who wants to understand modern data analytics.
+### Headers
 
-To get the most out of this course, you should complete daily exercises and weekly projects.
+You can add headers to the article using the format below.
+> ⚠️ There **_must_** be a space between the first word and the last hash
+or pound sign.
 
-## Course leads
+```markdown
+# H1 - use one hashtag to make the top level header
+## H2
+### H3
+#### H4
+##### H5
+```
 
-| Name |                                                       Github                                                                                                      |                                   Linkedin                                    |
-| :------: | :----------------------------------------------------------------------------------------------: | :--------------------------------------------------------------------------: |
-|   Katia |   [![GitHub logo](https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-16.png)](https://github.com/missKatiaPunter)   |   [![Linkedin](https://www.linkedin.com/favicon.ico)](https://www.linkedin.com/in/katia-punter-6313ba177/)  |                                                                              |
-| Alex | [![GitHub logo](https://cdn4.iconfinder.com/data/icons/iconsimple-logotypes/512/github-16.png)](https://github.com/alexcasper)  | [![Linkedin](https://www.linkedin.com/favicon.ico)](https://www.linkedin.com/in/alexcaspercline/)  |
+### Emphasis
 
-## GitHub welcome
+Add emphasis to the article using the format below
 
-One of the first technologies we will learn is called GitHub.
+- Emphasis, aka italics, with `*asterisks*` or `_underscores_`
+  - *asterisks* or _underscores_
+- Strong emphasis, aka bold, with `**asterisks**` or `__underscores__`
+  - **asterisks** or __underscores__
+- Combined emphasis with `**asterisks and _underscores_**`
+  - **asterisks and _underscores_**
+- Strikethrough uses two tildes `~~Scratch this~~`
+  - ~~Scratch this~~
 
-GitHub is the place coders store code and collaborate. Follow the link below, read more about GitHub in a document called README and raise your first issue.
+### Blockquotes
 
-[<img
-    src="/img/icons/github-logo.svg"
-    alt="Deepnote link"
-/>](https://github.com/EDGENortheastern/welcome-feb-22/blob/main/README.md)
+Add quotes to the article using the format below:
 
-[Link to GitHub](https://github.com/EDGENortheastern/welcome-feb-22/blob/main/README.md)
+``` markdown
+> Add the angle bracket `>` to add an indent to the quote in the article
+```
+
+> Add the angle bracket `>` to add an indent to the quote in the article
+
+```markdown
+> Quotes spread one line apart
+> will be shown in the same quote
+```
+
+> Quotes spread one line apart
+> will be shown in the same quote
+
+### Lists
+
+To produce numbered lists add a number (any numbers would work,
+but all 1s are common) followed by a dot and a space
+at the start of the line:
+
+```markdown
+1. Numbers create
+1. An ordered list
+1. In the article
+```
+
+1. Numbers create
+1. An ordered list
+1. In the article
+
+<!-- markdownlint-disable MD004 -->
+
+```markdown
+* Unordered lists can use asterisks
+- Or minuses
++ Or pluses
+```
+
+* Unordered lists can use asterisks
+- Or minuses
++ Or pluses
+
+<!-- markdownlint-enable MD004 -->
+
+To create a nested list add two spaces to its starting position.
+
+```markdown
+- The first line
+  - The indented line
+- The next line
+```
+
+- The first line
+  - The indented line
+- The next line
+
+## Adding inline elements to posts with Markdown
+
+### Images
+
+You can add an image to the markdown body using the format below
+
+```markdown
+![alt text](file URL)
+```
+
+For example, to include this image
+
+![Image example](/img/icons/github-logo.svg)
+
+the following markdown was used:
+
+```markdown
+![Deepnote logo](/img/icons/github-logo.svg)
+```
+
+### Hyperlinks
+
+Add hyperlinks to the text body using the format below
+
+```markdown
+[I'm a link to Google](https://www.google.com)
+```
+
+[I'm a link to Google](https://www.google.com)
+
+## Making slides with Markdown
+
+The best way to learn Markdown is to write in Markdown. There is an app that allows making slide decks using Markdown. It is called Hackmd. Please sign up with your GitHub account.
+
+[Link to hackmd](https://hackmd.io/)
+
+Hackmd is very intuitive, and you can switch between typing Markdown and using its GUI. To make a new slide use `---`:
+
+<img
+  src="/img/day-1/hackmd-intro.png"
+  alt="Hackmd"
+  class="wide screenshot"
+/>
+
+To turn your Markdown document into slides, change the mode and choose to preview:
+
+<img
+  src="/img/day-1/slide-mode.png"
+  alt="Hackmd"
+  class="narrow screenshot"
+/>

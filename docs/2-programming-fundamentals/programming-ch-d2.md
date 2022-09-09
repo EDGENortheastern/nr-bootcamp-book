@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Programming challenges and projects, day 2
+# D2S4. Programming challenges and projects, day 2
 
 ## Python codewars
 
