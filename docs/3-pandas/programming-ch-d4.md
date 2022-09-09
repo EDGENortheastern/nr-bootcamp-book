@@ -2,7 +2,7 @@
 sidebar_position: 4
 ---
 
-# Programming challenges and projects, day 3
+# D3S4.  Programming challenges and projects, day 3
 
 ## Individual or group project
 
